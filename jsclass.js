@@ -73,6 +73,7 @@ for (var k in arr) {
 console.log(arr['length']); // logs 1; same as console.log(arr.length)
 */
 
+/*
 var arr = [];
 
 arr['x'] = 9;
@@ -88,8 +89,26 @@ var x = [1, 2, 3, 4]
 for(var bird = 0; bird < arr.length; bird++) {
 	console.log(x);
 };
+*/
 
 
+// Functions as Objects
+
+var fun = function () {
+
+};
+
+fun['x'] = 9;
+fun[ 0 ] = 'cat', fun[ 1 ] = 'dog';
+console.log(fun['x']);
+console.log(fun[ 0 ]);
+for (var k in fun) {
+	console.log(k);
+};
+console.log(fun.length);
+for( var i = 0; i < fun.length; i++) {
+	console.log(i);
+}
 
 
 
