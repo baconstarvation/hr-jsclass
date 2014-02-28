@@ -205,7 +205,7 @@ christo.friend.danceMoves[5] = "the your-mother";
 var danceMovesShow = function(obj) {
 	for (var i = 0; i < obj.friend.danceMoves.length; i++) { console.log(obj.friend.danceMoves[i]); }
 };
-danceMovesShow(christo);
+// danceMovesShow(christo);
 
 
 // write a function that takes an array of numbers [1,2,3,4,5] and returns an object that looks like this {1:2, 2:4, 3:6, 4:8, 5:10}
@@ -217,7 +217,7 @@ var doubler = function(arr) {
 		return obj;
 	};
 };
-doubler([1,2,3,4,5]);
+// doubler([1,2,3,4,5]);
 
 /*
 var fuNumbers = function(obj) {
@@ -234,7 +234,52 @@ var arrLogger = function(arr) {
 	console.log(arr.length);
 	console.log(arr[arr.length-1]);
 };
-arrLogger([1,2,3,4,14]);
+// arrLogger([1,2,3,4,14]);
+
+
+// create an object with 4 properties and boolean values
+var objBull = {
+	pork: true,
+	chicken: false,
+	mcrib: true,
+	mcchicken: false
+};
+
+
+// and write a function that console.log() all the true values ONLY
+// hint: if/else
+
+// for in loop
+//for (var key in object )
+
+var liarliar = function(obj) {
+	for (var key in obj ) {
+		if (obj[key]) {
+			// console.log(key);
+			console.log(true);
+		}
+		else { 
+			// console.log(key);
+			console.log(false);
+		}
+	}
+};
+liarliar(objBull);
+
+
+
+
+// write a function that console.log() all the keys in the object
+
+var readAll = function(obj) {
+	for (var key in obj) {
+		console.log(key);
+	}
+};
+readAll(objBull);
+
+
+
 
 
 // add the property ~1 to your object and give it the value true
@@ -244,13 +289,13 @@ christo['~1'] = true;
 var showSmiles = function(obj) {
 	return obj.smiles;
 };
-console.log(showSmiles(christo));
+// console.log(showSmiles(christo));
 
 // write a function that returns the value of the ~1 property
 var showProperty = function(obj) {
 	return obj['~1'];
 }
-console.log(showProperty(christo));
+// console.log(showProperty(christo));
 
 
 // write a function that returns values located at the first index of the pets array
@@ -258,7 +303,7 @@ var showPets = function(obj) {
 	// return obj['pets'][0]; // same thing as the one right below
 	return obj.pets[0];
 }
-console.log(showPets(christo));
+// console.log(showPets(christo));
 
 // add a property called friend to your object and whose value is an object literal +
 // give your friend object a key called name that has the value of your neighbor's name
@@ -279,7 +324,7 @@ arr.push("the penguin");
 var movesLength = function(obj) {
 	return obj.length;
 };
-console.log(movesLength(arr));
+// console.log(movesLength(arr));
 
 
 
