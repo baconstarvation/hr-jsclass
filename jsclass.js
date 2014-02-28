@@ -209,14 +209,32 @@ danceMovesShow(christo);
 
 
 // write a function that takes an array of numbers [1,2,3,4,5] and returns an object that looks like this {1:2, 2:4, 3:6, 4:8, 5:10}
-var arrNums = [1,2,3,4,5];
 
+var doubler = function(arr) {
+	var obj = {};
+	for (var i = 0; i < arr.length; i++) {
+		obj[arr[i]] = arr[i] + 2;
+		return obj;
+	};
+};
+doubler([1,2,3,4,5]);
+
+/*
 var fuNumbers = function(obj) {
 	for (var i = 0; i < obj.length; i++) {
-		console.log(obj[i] + ":" + ((i+1) *2));
+		console.log(obj[i] + ":" + ((i+1) * 2));
 	}
 };
 fuNumbers(arrNums);
+*/
+
+
+// write a function that console.log() the length of an array and also the value at the last index of the same array
+var arrLogger = function(arr) {
+	console.log(arr.length);
+	console.log(arr[arr.length-1]);
+};
+arrLogger([1,2,3,4,14]);
 
 
 // add the property ~1 to your object and give it the value true
