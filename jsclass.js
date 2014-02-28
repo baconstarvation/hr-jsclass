@@ -195,13 +195,28 @@ var christo = {
 	}
 };
 
-// write a function that returns all the values in the danceMoves array
-// console.log(christo.friend.danceMoves);
 
+christo.friend.danceMoves.push("the bilbo");
+christo.friend.danceMoves.unshift("the smaug");
+christo.friend.danceMoves[5] = "the your-mother";
+
+
+// write a function that returns all the values in the danceMoves array
 var danceMovesShow = function(obj) {
-	return obj.friend.danceMoves;
+	for (var i = 0; i < obj.friend.danceMoves.length; i++) { console.log(obj.friend.danceMoves[i]); }
 };
-console.log(danceMovesShow(christo));
+danceMovesShow(christo);
+
+
+// write a function that takes an array of numbers [1,2,3,4,5] and returns an object that looks like this {1:2, 2:4, 3:6, 4:8, 5:10}
+var arrNums = [1,2,3,4,5];
+
+var fuNumbers = function(obj) {
+	for (var i = 0; i < obj.length; i++) {
+		console.log(obj[i] + ":" + ((i+1) *2));
+	}
+};
+fuNumbers(arrNums);
 
 
 // add the property ~1 to your object and give it the value true
