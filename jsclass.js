@@ -1,14 +1,17 @@
 // slides.hackreactor.com
+// bianca@hackreactor.com
 
 // Objects and Property Access
 // using dot notation add a property name with the value being your actual name
 
 /*
-var user = {};
-user.name = "anthony";
-user.age = "26";
-console.log(user);
+var christo = {};
+// christo.name = "christo";
+christo.smiles = true;
+christo['pets'] = ['bill', 'bob', 'etc']; 
+console.log(christo['pets']);
 */
+
 
 // add onto the object a property that's your favorite color. set its value to true
 /*
@@ -162,6 +165,7 @@ var fun = function(input) {
 };
 */
 
+/*
 var x = function(y, z) {
 	var test = "y";
 	console.log(arguments, test);
@@ -170,6 +174,50 @@ var x = function(y, z) {
 	};
 	w(1);
 };
+*/
+
+
+
+// class 2
+
+var christo = {};
+// christo.name = "christo";
+christo.smiles = true;
+christo['pets'] = ['bill', 'bob', 'etc']; 
+// console.log(christo['pets']);
+
+// add the property ~1 to your object and give it the value true
+christo['~1'] = true;
+
+// write a function that returns the value of the smiles property
+var showSmiles = function(obj) {
+	return obj.smiles;
+};
+console.log(showSmiles(christo));
+
+// write a function that returns the value of the ~1 property
+var showProperty = function(obj) {
+	return obj['~1'];
+}
+console.log(showProperty(christo));
+
+
+// write a function that returns values located at the first index of the pets array
+var showPets = function(obj) {
+	return obj['pets'][0];
+}
+console.log(showPets(christo));
+
+// add a property called friend to your object and whose value is an object literal +
+// give your friend object a key called name that has the value of your neighbor's name
+christo[friend] =  {
+	name = "tiberius";
+};
+
+
+
+
+
 
 
 
