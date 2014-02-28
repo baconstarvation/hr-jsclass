@@ -180,11 +180,29 @@ var x = function(y, z) {
 
 // class 2
 
+/*
 var christo = {};
-// christo.name = "christo";
 christo.smiles = true;
 christo['pets'] = ['bill', 'bob', 'etc']; 
-// console.log(christo['pets']);
+*/
+
+var christo = {
+	smiles: true,
+	pets: ['bill', 'bob', 'etc'],
+	friend: {
+		name: "bob",
+		danceMoves: ["worm", "sprinkler", "twerk"]
+	}
+};
+
+// write a function that returns all the values in the danceMoves array
+// console.log(christo.friend.danceMoves);
+
+var danceMovesShow = function(obj) {
+	return obj.friend.danceMoves;
+};
+console.log(danceMovesShow(christo));
+
 
 // add the property ~1 to your object and give it the value true
 christo['~1'] = true;
@@ -204,15 +222,33 @@ console.log(showProperty(christo));
 
 // write a function that returns values located at the first index of the pets array
 var showPets = function(obj) {
-	return obj['pets'][0];
+	// return obj['pets'][0]; // same thing as the one right below
+	return obj.pets[0];
 }
 console.log(showPets(christo));
 
 // add a property called friend to your object and whose value is an object literal +
 // give your friend object a key called name that has the value of your neighbor's name
-christo[friend] =  {
-	name = "tiberius";
+
+christo.friend = {};
+christo.friend.name = 'tigger';
+
+var arr = [];
+arr.push("roger"); // => ["roger"]
+arr.push("john"); // => ["roger", "john"]
+arr.unshift("me"); // => ["me", "roger", "john"];
+arr[3] = "you"; // => ["me", "roger", "john", "you"]
+arr.push("electric slide");
+arr.push("the python");
+arr.push("the penguin");
+
+// write a function that returns the length of the danceMoves array
+var movesLength = function(obj) {
+	return obj.length;
 };
+console.log(movesLength(arr));
+
+
 
 
 
